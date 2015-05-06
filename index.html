@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Project Template</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link href="css/bar/bar.css" rel="stylesheet" type="text/css"/>
+		<link href="css/dark/dark.css" rel="stylesheet" type="text/css"/>
+		<link href="css/default/default.css" rel="stylesheet" type="text/css"/>
+		<link href="css/light/light.css" rel="stylesheet" type="text/css"/>
+		<link href="css/nivo-slider.css" rel="stylesheet" type="text/css"/>
+		
+			<!-- Scrolling Nav JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('nav ul li a').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+				&& location.hostname == this.hostname) {
+				  var $target = $(this.hash);
+				  $target = $target.length && $target
+				  || $('[name=' + this.hash.slice(1) +']');
+				  if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body')
+					.animate({scrollTop: targetOffset}, 4000);
+				   return false;
+				  }
+				}
+			  });
+			});
+		</script>
+		
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+		  function initialize() {
+			var mapCanvas = document.getElementById('map-canvas');
+			var mapOptions = {
+			  center: new google.maps.LatLng(44.5403, -78.5463),
+			  zoom: 8,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(mapCanvas, mapOptions)
+		  }
+		  google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="header_area">
+				<div class="header_area-left left">
+					<i class="fa fa-dribbble"></i>
+					<h1>Kreative<span>Pixel</span></h1>
+				</div>
+				
+				<div class="header_area-right right">
+					<ul id="drop-nav">
+					  <li class="active"><a href="#">Home</a></li>
+					  <li><a href="">Feature</a>
+						<ul>
+						  <li><a href="#feature">Responsive Design</a></li>
+						  <li><a href="#feature">HTML 5</a></li>
+						  <li><a href="#feature">CSS 3</a></li>
+						  <li><a href="#feature">Graphic Design</a></li>
+						</ul>
+					  </li>
+					  <li><a href="">Shop</a></li>
+					  <li><a href="">Blog</a>
+						<ul>
+						  <li><a href="#blog">Latest Post</a></li>
+						  <li><a href="#blog">05-April-15</a></li>
+						  <li><a href="#blog">25-April-15</a></li>
+						  <li><a href="#blog">03-March-15</a></li>
+						</ul>
+					  </li>
+					  <li><a href="#works">Work</a></li>
+					  <li><a href="">Contact</a>
+						<ul>
+						  <li><a href="#contact">General Inquiries</a></li>
+						  <li><a href="#contact">Ask me a Question</a></li>
+						</ul>
+					  </li>
+					</ul>
+				</div>
+			</div>
+		</header>
+	<!--++++++++++++++++++++++++++++++++++++++-->
+		<section class="slider">
+			<div class="slider_area">
+				<div class="slider-wrapper theme-default">
+					<div class="nivoSlider" id="slider">
+						<img src="images/stonehenge.jpg" alt="">
+						<img src="images/stand_alone.jpg" alt="">
+						<img src="images/headshot.jpg" alt="">
+					</div>
+				</div>
+				<div class="slider_content">
+					<div class="slider_content-area">
+						<h2>We Design <span>Creative Website</span> <br />For Enterprising People</h2>
+						<p>Learn that his west quit had met till. Of advantage he <br />Attending household at do perceived. <br />Of advantage he gone.</p>
+						<button>Read More</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!--++++++++++++++++++++++++++++++++++++++-->
+		<section class="feature" id="feature">
+			<div class="feature_area">
+				<div class="feature_top-button"></div>
+				<div class="feature_area-top">
+					<h2>Check Out Feature</h2>
+				</div>
+				<div class="feature_area-bottom">
+					<div class="feature_bottom-one col-xs-6 col-md-3">
+						<a href="#">
+							<div class="feature_thumbnail-img">
+								<i class="fa fa-mobile"></i>
+							</div>
+							<h3>Mobile Ready</h3>
+							<p>We diminution preference thoroughly if. Joy deal pain view much her time.</p>
+							<button>Read More</button>
+						</a>
+					</div>
+					<div class="feature_bottom-two col-xs-6 col-md-3">
+						<a href="#">
+							<div class="feature_thumbnail-img">
+								<i class="fa fa-html5"></i>
+							</div>
+							<h3>HTML5 Valid</h3>
+							<p>That his west quit had met till. Of advantage he attending household at do perceived.</p>
+							<button>Read More</button>
+						</a>
+					</div>
+					<div class="feature_bottom-three col-xs-6 col-md-3">
+						<a href="#">
+							<div class="feature_thumbnail-img">
+								<i class="fa fa-css3"></i>
+							</div>
+							<h3>CSS3 Magic</h3>
+							<p>Possession her thoroughly remarkably terminated man continuing.</p>
+							<button>Read More</button>
+						</a>
+					</div>
+					<div class="feature_bottom-four col-xs-6 col-md-3">
+						<a href="#">
+							<div class="feature_thumbnail-img">
+								<i class="fa fa-star"></i>
+							</div>
+							<h3>Amazing design</h3>
+							<p>Gay six set polite nature worthy. So matter be me we wisdom should basket moment merely.</p>
+							<button>Read More</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!--++++++++++++++++++++++++++++++++++++++-->
+	<!--Slider deta hobe-->
+		<section class="works" id="works">
+			<div class="works_area">
+				<div class="works_top-button"></div>
+				<div class="works_area-top">
+					<h2>Our Latest Works</h2>
+				</div>
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<div class="works_area-bottom">
+								<div class="works_bottom-one col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (1).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (2).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+								<div class="works_bottom-two col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (3).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (4).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+								<div class="works_bottom-three col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (5).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (6).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+								<div class="works_bottom-four col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (7).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (8).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="works_area-bottom">
+								<div class="works_bottom-one col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (8).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (7).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+								<div class="works_bottom-two col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (6).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (5).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+								<div class="works_bottom-three col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (4).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (3).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+								<div class="works_bottom-four col-xs-6 col-md-3 gallery">
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (2).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+									<a href="#" class="thumbnail">
+										<div class="car_img">
+											<img src="images/gallery (1).jpg" alt="...">
+										</div>
+										<div class="fa_link">
+											<i class="fa fa-link"></i>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				  <!-- Controls -->
+					<div class="indicator">
+						<a class="carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!--++++++++++++++++++++++++++++++++++++++-->
+		<section class="blog" id="blog">
+			<div class="blog_area">
+				<div class="blog_top-button"></div>
+				<div class="blog_area-top">
+					<h2>Recent Blog Posts</h2>
+				</div>
+				<div class="blog_area-bottom">
+					<div class="blog_bottom-one col-sm-6 col-md-4">
+						<a href="#" class="thumbnail">
+							<div class="blog_thumbImg">
+								<img src="images/gallery (2).jpg" alt="...">
+							</div>
+							<div class="blog_abtImg rajesh_vai"></div>
+							<p class="blog_date">05-April-15</p>
+							<p class="blog_con">I diminution preference thoroughly if. Joy deal pain view much her time.</p>
+							<button>More</button>
+						</a>
+					</div>
+					<div class="blog_bottom-two col-sm-6 col-md-4">
+						<a href="#" class="thumbnail">
+							<div class="blog_thumbImg">
+								<img src="images/gallery (4).jpg" alt="...">
+							</div>
+							<div class="blog_abtImg shakil_vai"></div>
+							<p class="blog_date">25-April-15</p>
+							<p class="blog_con">Hay six set polite nature worthy. So matter be me we wisdom should basket moment merely.</p>
+							<button>More</button>
+						</a>
+					</div>
+					<div class="blog_bottom-three col-sm-6 col-md-4">
+						<a href="#" class="thumbnail">
+							<div class="blog_thumbImg">
+								<img src="images/gallery (7).jpg" alt="...">
+							</div>
+							<div class="blog_abtImg linkon_vai"></div>
+							<p class="blog_date">03-March-15</p>
+							<p class="blog_con">The possession her thoroughly remarkably terminated man continuing.</p>
+							<button>More</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!--++++++++++++++++++++++++++++++++++++++-->
+		<section class="contact" id="contact">
+			<div id="map-canvas"></div>
+			<div class="contact_area">
+				<div class="contact_area-button"></div>
+				<h3>Contact With Us</h3>
+				<p>Thoroughly remarkably</p>
+				<p class="tel">32532473</p>
+				<p class="email">jakir_comilla1@yahoo.com</p>
+				<form name="htmlform" method="post" action="html_form_send.php">
+					<table>
+					</tr>
+					<tr>
+					 <td valign="top">
+					  <input  type="text" name="name" maxlength="50" size="30" placeholder="Name">
+					 </td>
+					 <td valign="top">
+					  <input  type="text" name="email" maxlength="80" size="30" placeholder="Email">
+					 </td>
+					</tr>
+					 
+					<tr>
+					 <td valign="top" colspan="2">
+					  <textarea  name="comments" maxlength="1000" cols="73" rows="6" placeholder="Massage"></textarea>
+					 </td>
+					 
+					</tr>
+					<tr>
+					 <td colspan="2" style="text-align:center">
+					  <button>Send Massage</button>
+					 </td>
+					</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	<!--++++++++++++++++++++++++++++++++++++++-->
+		<footer>
+			<div class="footer_area">
+				<div class="footer_area-top">
+					<ul>
+					  <li class="active"><a href="#">Home</a></li>
+					  <li><a href="#feature">Feature</a></li>
+					  <li><a href="">Shop</a></li>
+					  <li><a href="#blog">Blog</a></li>
+					  <li><a href="#works">Work</a></li>
+					  <li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<hr />
+				<div class="footer_area-bottom">
+					<p>KreativePixel &copy; 2013 All Right Reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript">
+		$(window).load(function() {
+			$('#slider').nivoSlider();
+		});
+		</script>
+	</body>
+</html>
